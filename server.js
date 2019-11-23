@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = 'https://lucid-cray-84ad58.netlify.com/' || 5000;
 
 app.use(cors());
 
@@ -19,9 +19,9 @@ app.get('/api/model_info', (req, res) => {
 
 app.use(express.static(path.join(__dirname, 'build')));
 
-app.get('/*', function (req, res) {
-   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.listen(process.env.PORT || port);
+app.listen('https://lucid-cray-84ad58.netlify.com/' || port);
 console.log(`Running on http://localhost:${port}`);
