@@ -1,8 +1,8 @@
 ---
 applications:
-  - name: web-classify
+  - name: image-classify-horus
     memory: 512M
     disk_quota: 2048M
     routes:
-      - route: https://lucid-cray-84ad58.netlify.com/
+      - route: image-classify-horus.mybluemix.net
     command: npm run start-prod
